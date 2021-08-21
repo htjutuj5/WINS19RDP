@@ -9,30 +9,30 @@ jobs:
     timeout-minutes: 9999
 
     steps:
-    - name: Downloading Ngrok.
+    - name: ngrok ডাউনলোড হচ্ছে...
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/NiDawgBD/WINS19RDP/main/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/NiDawgBD/WINS19RDP/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/NiDawgBD/WINS19RDP/main/wallpaper.jpg -OutFile wallpaper.jpg
         Invoke-WebRequest https://raw.githubusercontent.com/NiDawgBD/WINS19RDP/main/wallpaper.bat -OutFile wallpaper.bat
-    - name: Extracting Ngrok Files.
+    - name: ngrok ফাইলসমূহ নিষ্কাশন করা হচ্ছে...
       run: Expand-Archive ngrok.zip
-    - name: Connecting to your Ngrok account.
+    - name: আপনার ngrok একাউন্টের সাথে সংযুক্ত করা হচ্ছে...
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
-    - name: Activating RDP access.
+    - name: আরডিপি এক্সেস চালু করা হচ্ছে...
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.jpg D:\a\wallpaper.jpg
         copy wallpaper.bat D:\a\wallpaper.bat
-    - name: Creating Tunnel.
+    - name: টানেল তৈরি করা হচ্ছে...
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
-    - name: Connecting to your RDP.
+    - name: আরডিপি এর সাথে সংযোগ প্রদান করা হচ্ছে...
       run: cmd /c start.bat
-    - name: RDP is ready!
+    - name: ব্যাস! তৈরি হয়ে গেল আরডিপি!
       run: | 
         Invoke-WebRequest https://github.com/NiDawgBD/WINS19RDP/raw/main/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
