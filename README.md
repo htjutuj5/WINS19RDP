@@ -27,6 +27,5 @@ NGROK এর অথেনটিকেশন টোকেন
 <br>সর্বোচ্চ সময়কালঃ ৬ ঘণ্টা</br>
 অপারেটিং সিস্টেমঃ উইন্ডোজ সার্ভার ২০১৯ - ডেটাসেন্টার এডিশন
 
-
 Forked from https://github.com/FDCI1337/RDP
 Translated by NiDawgBD
