@@ -1,14 +1,24 @@
 # FREE RDP WINDOWS SERVER!
 
-Create Free RDP 7GB RAM and 2 CPU Core with Github.
-Follow these instructions
+গিটহাব দিয়ে ভার্চুয়াল রিমোট কম্পিউটার (৭জিবি র‍্যাম, ডুয়াল কোর প্রসেসর, ২৫৫জিবি এসএসডি ড্রাইভ) তৈরি করুন বিনামূল্যে।
 
-+ Click Fork to get started (Mobile users please activate Desktop Mode).
-+ Visit https://dashboard.ngrok.com to get NGROK_AUTH_TOKEN
-+ In this repository go to Settings> Secrets> New repository secret
-+ Name: NGROK_AUTH_TOKEN
-+ Value: https://dashboard.ngrok.com/auth/your-authtoken copy and paste authtoken in the value
-+ Click add secret
-+ Go to Action (if you see any warning click "I understand...") > FreeRDP > run workflow
-+ Refresh website - go to FreeRDP > build
-+ Click the down arrow "RDP INFO LOGIN" To get IP, User, Password.
+নির্দেশনা অনুসরণ করুনঃ
++ শুরু করতে ফর্ক (Fork) বাটনে ক্লিক করুন (মোবাইলে করতে ডেস্কটপ মোড নির্বাচন করুন)
++ NGROK_AUTH_TOKEN পেতে এই ওয়েবসাইটে https://dashboard.ngrok.com ভিজিট করুন
++ এই রিপোজিটরিতে, সেটিংসে যান -> সিক্রেটস -> নিউ রিপোজিটরি সিক্রেটস এ ক্লিক করুন
++ নাম (Name): NGROK_AUTH_TOKEN
++ ভ্যালু (Value): https://dashboard.ngrok.com/auth/your-authtoken copy and paste authtoken in the value
++ "Add Secret" এ ক্লিক করুন
++ অ্যাকশনে যান (যদি আপনি এই সতর্কবার্তা "I understand..." দেখতে পান, "Yes, Ok" ক্লিক করুন) -> FreeRDP -> Run Workflow
++ ওয়েবসাইটটি রিফ্রেশ করুন - এরপর FreeRDP > build এ যান
++ রিমোট কম্পিউটারে এক্সেস করার জন্য আইপি এড্রেস, ইউজারনেম ও পাসওয়ার্ড পেতে "RDP INFO LOGIN" এর ডাউন এরোতে ক্লিক করুন
+
+ব্যাস! তৈরি হয়ে গেল রিমোট কম্পিউটার। আপনি আরামসে যা খুশি কাজ করতে পারেন (কোড সম্পাদন, ব্রাউজিং, আপলোড-ডাউনলোড, স্পিডটেস্ট সহ আরো অনেক কিছু)
+
+সতর্কতাঃ এই পদ্ধতিটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে ব্যবহার করা যাবে, কোন অসদুপায় অবলম্বনের জন্য নয়!
+সর্বোচ্চ সময়কালঃ ৬ ঘণ্টা
+অপারেটিং সিস্টেমঃ উইন্ডোজ সার্ভার ২০১৯ - ডেটাসেন্টার এডিশন
+
+
+Forked from https://github.com/FDCI1337/RDP
+Translated by NiDawgBD
